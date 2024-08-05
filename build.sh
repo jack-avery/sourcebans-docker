@@ -11,5 +11,5 @@ function get_latest_release_tag() {
 
 SB_TAG=$(get_latest_release_tag)
 
-podman build -t crinis/sourcebans:sb-${SB_TAG} -t crinis/sourcebans:latest --build-arg CHECKOUT="${SB_TAG}" .
-podman build -t crinis/sourcebans:sb-dev --build-arg CHECKOUT="php81" .
+docker buildx build -t crinis/sourcebans:sb-${SB_TAG} -t crinis/sourcebans:latest --build-arg CHECKOUT="${SB_TAG}" .
+docker buildx build -t crinis/sourcebans:sb-dev --build-arg CHECKOUT="php81" .

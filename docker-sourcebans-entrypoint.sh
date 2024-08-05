@@ -20,4 +20,6 @@ if [ "false" == $INSTALL ] || [ -z ${INSTALL+x} ]; then
     fi
 fi
 
+chown -R www-data:www-data /var/www/html
+
 exec "docker-php-entrypoint" $@

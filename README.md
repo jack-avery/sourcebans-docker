@@ -1,3 +1,9 @@
+## Why a fork?
+
+I run servers for people using my [Ansible playbooks](https://github.com/jack-avery/ansible-tf2network).
+I use a Raspberry PI in that setup for metrics. The Dockerhub does not contain `linux/arm64/v8` images.
+I had to perform some modifications to satisfy Composer. You probably don't need to use this.
+
 # Sourcebans Docker Image
 
 [Docker Image](https://hub.docker.com/r/crinis/sourcebans) for [SourceBans++](https://github.com/sbpp/sourcebans-pp/).
