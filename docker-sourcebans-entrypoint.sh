@@ -8,6 +8,7 @@ set -euo pipefail
 if [ "true" == $INSTALL ]; then
     rm -rf /var/www/html/themes/default /var/www/html/updater /var/www/html/install /var/www/html/pages /var/www/html/includes
     cp -R /usr/src/sourcebans/* /var/www/html/
+    mkdir /var/www/html/cache
 fi
 
 # If $INSTALL is set to false or not set, remove the install and updater directories
@@ -20,7 +21,6 @@ if [ "false" == $INSTALL ] || [ -z ${INSTALL+x} ]; then
     fi
 fi
 
-mkdir /var/www/html/cache
 chown -R www-data:www-data /var/www/html
 
 exec "docker-php-entrypoint" $@
