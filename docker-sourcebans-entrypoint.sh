@@ -20,6 +20,7 @@ if [ "false" == $INSTALL ] || [ -z ${INSTALL+x} ]; then
     fi
 fi
 
+mkdir /var/www/html/cache
 chown -R www-data:www-data /var/www/html
 
 exec "docker-php-entrypoint" $@
